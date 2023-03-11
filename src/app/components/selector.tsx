@@ -5,7 +5,7 @@ import { SearchKeys } from '@/types'
 
 export const Selector = () => {
   const router = useRouter()
-  const pathNameParams = new URLSearchParams(usePathname().replace('/', ''))
+  const pathNameParams = new URLSearchParams(usePathname()?.replace('/', ''))
   const { location, month, budget, activity } = Object.fromEntries(pathNameParams) as Record<
     SearchKeys,
     string
